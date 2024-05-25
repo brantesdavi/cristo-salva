@@ -1,0 +1,19 @@
+<a class="rounded-lg px-4 py-3 flex flex-col bg-white drop-shadow-md space-y-2" [routerLink]="['/schedule', schedule.idSchedule]">
+  <div class="flex flex-col">
+    <div class="flex flex-row justify-between items-center">
+      <span class="font-medium">{{schedule.title}}</span>
+      <span class="text-sm">{{schedule.minister}}</span>
+    </div>
+    
+  </div>
+  <div class="flex flex-row items-center">
+    <div *ngFor="let tag of schedule.tags" class="flex-grow-0 basis-auto mr-2">
+      <div [ngStyle]="{'background-color': tag.color}" class="bg-[tag.color] text-white rounded-full px-2 py-0.5">
+        <span class="text-xs text-black font-medium">{{tag.title}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-xs flex space-x-2">
+    <span>{{ schedule.date | date:'dd/MM/yyyy' }}</span> 
+    <span class="">ensaio: {{ getTimeFromDateTime(schedule.date) }}</span> </div>
+  </a>

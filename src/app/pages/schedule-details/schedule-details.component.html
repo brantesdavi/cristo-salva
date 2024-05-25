@@ -1,0 +1,40 @@
+<div>
+
+  <div class="flex flex-col">
+    <span class="text-2xl font-bold">{{schedule.title}}</span>
+    <span class="">{{schedule.minister}}</span>
+  </div>
+  <div>
+    {{schedule.date}}
+  </div>
+
+  <div>
+    <div class="w-full py-2 px-3" *ngIf="schedule.minister">
+      Ministro: {{schedule.minister}}
+    </div>
+
+    <div class="w-full py-2 px-3" *ngIf="schedule.band.back">
+      Back: {{schedule.band.back}}
+    </div>    
+
+    <div class="w-full py-2 px-3" *ngIf="schedule.band.aGuitar">
+      Violão: {{schedule.band.aGuitar}}
+    </div>
+
+    <div class="w-full py-2 px-3" *ngIf="schedule.band.drums">
+      Bateria: {{schedule.band.drums}}
+    </div>
+
+    <div class="w-full py-2 px-3" *ngIf="schedule.band.keys">
+      Teclado: {{schedule.band.keys}}
+    </div>
+
+    <div class="w-full py-2 px-3" *ngIf="schedule.band.guitar">
+      Bateria: {{schedule.band.guitar}}
+    </div>
+
+    <div class="w-full py-2 px-3" *ngIf="schedule.band.bass">
+      Baixo: {{schedule.band.bass}}
+    </div>
+  </div>
+</div>

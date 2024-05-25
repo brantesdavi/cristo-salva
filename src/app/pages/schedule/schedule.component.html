@@ -1,0 +1,8 @@
+<div class="p-2">
+  <div class="flex flex-col items-center">
+    <div *ngFor="let schedule of listSchedule" class="flex-grow-0 basis-auto mb-2 w-full">
+      <app-card-schedule [schedule] = schedule></app-card-schedule>
+    </div>
+  </div>
+</div>
+
